@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.hide {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2rem;
+    text-align: center;
+    transition: top 2s ease-in-out;
+}
+
+body {
+    background: linear-gradient(to bottom, rgb(237, 43, 127), rgb(0, 247, 255), rgb(180, 255, 6));
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #F5F5F5;
+    border-radius: 2%;
+    display: block;
+    height: 70vh;
+    width: 45vw;
+    text-align: center;
+    padding-bottom: 5%;
+    box-shadow: 0px 16px 30px rgba(0, 0, 0, 0.7);
+}
+
+.game {
+    height: 82%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 5%;
+}
+
+.box {
+    height: 28%;
+    width: 26%;
+    border-radius: 8%;
+    border: none;
+    font-size: 400%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #E3F2FD;
+    transition: background-color 0.3s ease;
+}
+
+.box:hover {
+    background-color: #BBDEFB;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+@keyframes multiBounce {
+    0% { top: -100vh; }
+    80% { top: 0; }
+    90% { top: -25px; }
+    95% { top: 0; }
+    97% { top: -18px; }
+    99% { top: 0; }
+    100% { top: 0; }
+}
+
+.hide {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to left, orange, rgb(240, 63, 63), rgb(151, 10, 151));
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2rem;
+    text-align: center;
+    transition: top 1.5s ease-in-out;
+}
+
+.showBounce {
+    animation: multiBounce 2s ease-in-out;
+}
+
+#resetBtn, #newGameBtn {
+    background-color: #087083;
+    font-size: 180%;
+    color: white;
+    border: 1.5px solid #087083;
+    border-radius: 7px;
+    padding: 0.5%;
+    transition: background-color 1s ease, transform 0.3s ease;
+}
+
+#newGameBtn {
+    font-size: 130%;
+    margin-top: 6%;
+}
+
+#resetBtn:hover, #newGameBtn:hover {
+    background-color: #065F6B;
+    transform: scale(1.15);
+}
+
+@keyframes flipAnimation {
+    0% { transform: rotateX(0deg); }
+    100% { transform: rotateX(360deg); }
+}
+
+.flip {
+    animation: flipAnimation 1s ease-in-out;
+}
